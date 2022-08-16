@@ -26,6 +26,10 @@ mongoose
     console.log(err);
   });
 
+  app.get("/", async function(request,response){
+    response.send("🎇Babi Rentals welcomes you!!!🎇");
+});
+
   app.use("/api/auth", authRoute);
   app.use("/api/users", userRoute);
   app.use("/api/products", productRoute);
